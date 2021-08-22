@@ -4,7 +4,7 @@
  * @Author: Rebort
  * @Date: 2021-08-22 10:39:46
  * @Email: 940954530@qq.com
- * @LastEditTime: 2021-08-22 10:43:52
+ * @LastEditTime: 2021-08-22 11:00:08
  * @Description: 按天记录日志，区分日志级别
  */
 
@@ -68,7 +68,6 @@ class Log
     {
         $day = self::$year . '/' . self::$month . '/' . self::$day;
         self::$basePath = str_replace("\\", "/", __DIR__);
-        // $fileName = self::$basePath . '/log/' . $day . '.log';
         $fileName = self::$basePath . '/log/' . $day . '/' . $level . '.log';
         $url = '[' . ($_SERVER['REQUEST_URI'] ?? $_SERVER['PHP_SELF']) . '] ';
 
